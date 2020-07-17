@@ -1,0 +1,29 @@
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-onstartup>1</load-onstartup>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/classes/spring.xml</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<url-pattern>*.odc</url-pattern>
+	</servlet-mapping>
+	
+	<error-page>
+		<error-name>404</error-name>
+		<location>/Exception.jsp</location>
+	</error-page>
+	
+	<error-page>
+		<error-name>500</error-name>
+		<location>/Error.jsp</location>
+	</error-page>
+
+</web-app>
